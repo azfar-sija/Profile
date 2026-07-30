@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #3f32b1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    perspective: 1000px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 400px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+
+.pic img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #e1306c; /* Instagram-ish color or Telkom Red */
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.role {
+    font-size: 14px;
+    color: #e0e0e0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff357a, #fff172);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-body {
+    margin-bottom: 30px;
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    color: #aaa;
+}
+
+.value {
+    font-weight: 600;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.1);
+}
+
+.social-icon:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+.social-icon.instagram:hover {
+    color: #e1306c;
+}
+
+.social-icon.linkedin:hover {
+    color: #0077b5;
+}
+
+/* Mobile Small */
+@media (max-width: 375px) {
+    .profile-card {
+        padding: 25px 15px;
+        max-width: 100%;
+    }
+
+    .pic img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .role {
+        font-size: 11px;
+    }
+
+    .info-item {
+        font-size: 12px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile */
+@media (min-width: 376px) and (max-width: 576px) {
+    .profile-card {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .pic img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .role {
+        font-size: 12px;
+    }
+
+    .info-item {
+        font-size: 13px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 577px) and (max-width: 768px) {
+    .profile-card {
+        padding: 35px 25px;
+        max-width: 450px;
+    }
+
+    .pic img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .role {
+        font-size: 13px;
+    }
+}
+
+/* Tablet Large */
+@media (min-width: 769px) and (max-width: 992px) {
+    .profile-card {
+        padding: 40px 30px;
+        max-width: 480px;
+    }
+
+    .pic img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .name {
+        font-size: 26px;
+    }
+
+    .role {
+        font-size: 15px;
+    }
+
+    .info-item {
+        font-size: 15px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 993px) {
+    .profile-card {
+        padding: 50px;
+    }
+
+    .pic img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .role {
+        font-size: 16px;
+    }
+
+    .info-item {
+        font-size: 15px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
